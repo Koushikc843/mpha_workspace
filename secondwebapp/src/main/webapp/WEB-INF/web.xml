@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>secondwebapp</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  
+  <servlet>
+  <servlet-name>WelcomeServlet</servlet-name>
+  <servlet-class>com.mphasis.secondwebapp.WelcomeServlet</servlet-class>
+    <!--these parameters can be used by welcome servlet only -->
+  <init-param>
+  <param-name>server</param-name>
+  <param-value>22</param-value>
+  </init-param>
+  </servlet>
+ <servlet-mapping>
+ <servlet-name>WelcomeServlet</servlet-name>
+ <url-pattern>/welcome</url-pattern>
+ </servlet-mapping>
+  
+  
+  <!--  -->
+  <!--these parameters can be used by any servlet -->
+  <context-param>
+  <param-name>
+  database
+  </param-name>
+  <param-value>Mysql</param-value>
+  </context-param>
+  <context-param>
+  <param-name>login</param-name>
+  <param-value>root</param-value>
+  </context-param>
+  <context-param>
+  <param-name>password</param-name>
+  <param-value>123</param-value>
+  </context-param>
+
+  
+  
+</web-app>

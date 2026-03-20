@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<h2>Calculator</h2>
+
+  <form method="post" action="Calc">
+    <div class="row">
+      <label for="num1">Number 1:</label><br>
+      <input type="text" id="num1" name="num1" required>
+    </div>
+
+    <div class="row">
+      <label for="num2">Number 2:</label><br>
+      <input type="text" id="num2" name="num2" required>
+    </div>
+
+    <fieldset>
+      <legend>Operation</legend>
+      <label class="inline">
+        <input type="radio" name="op" value="+" checked>
+        +
+      </label>
+      <label class="inline">
+        <input type="radio" name="op" value="-">
+        -
+      </label>
+      <label class="inline">
+        <input type="radio" name="op" value="*">
+        *
+      </label>
+      <label class="inline">
+        <input type="radio" name="op" value="/">
+        /
+      </label>
+      <!-- Optional: uncomment if you want modulus
+      <label class="inline">
+        <input type="radio" name="op" value="%">
+        %
+      </label>
+      -->
+    </fieldset>
+
+    <!-- Calc button at the last -->
+    <button type="submit">Calc</button>
+  </form>
+
+
+</body>
+</html>
