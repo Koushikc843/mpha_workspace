@@ -8,6 +8,10 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<jsp:include page="menu.jsp"/>
+<h3>SignIn</h3>
+<div>
 <div id=form><form  action=" logincontroller" method="post">
 
 <div>
@@ -22,7 +26,7 @@
 <button id=but>submit</button>
 </div>
 
-<div><%= request.getAttribute("msg") %></div>
+<div><p>${msg}<p></div>
 
 </form></div>
 

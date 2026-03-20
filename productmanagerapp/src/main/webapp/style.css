@@ -3,16 +3,12 @@
 
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     margin: 0;
 }
 
 #container {
-    display: flex;
-    flex-direction:column;
+  
     gap: 20px;
  
 }
@@ -29,14 +25,10 @@ body {
 }
 
 #but {
-    background-color: green;
-    border: 1px solid black;
-    border-radius: 25%;
-    font-size: 25px;
     font-family: fantasy;
-    padding: 10px 20px;
+  
     cursor: pointer;
-    text-align: center;
+  
 }
 
 h3 {
@@ -45,9 +37,9 @@ h3 {
 }
 
 #form{
-	display:flex;
+
 	border:4px,dashed,blue;
 	border-radius:10%;
-	gap:20px;
+
 	padding:20px;
 	}
