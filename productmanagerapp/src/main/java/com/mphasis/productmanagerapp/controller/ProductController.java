@@ -1,6 +1,10 @@
 package com.mphasis.productmanagerapp.controller;
 
 import java.io.IOException;
+import java.util.List;
+
+import com.mphasis.productmanagerapp.model.ProductModel;
+import com.mphasis.productmanagerapp.service.ProductService;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -9,19 +13,20 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/homecontroller")
-public class HomeController extends HttpServlet {
+@WebServlet("/productcontroller")
+public class ProductController extends HttpServlet {
+
+    private ProductService productService = new ProductService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
 
-        // Set an optional message for your home page
-        req.setAttribute("msg", "");
+        List<ProductModel> products = productService.getAllProducts();
 
-        // IMPORTANT: Use absolute path with leading slash
-        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/view/home.jsp");
-        
+        req.setAttribute("products", products);
+
+        RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/view/products.jsp");
         rd.forward(req, resp);
     }
 }

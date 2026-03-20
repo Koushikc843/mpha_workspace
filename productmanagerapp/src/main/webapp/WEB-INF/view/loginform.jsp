@@ -1,34 +1,41 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>SignIn</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <!DOCTYPE html>
+    <html>
 
-<jsp:include page="menu.jsp"/>
-<h3>SignIn</h3>
-<div>
-<div id=form><form  action=" logincontroller" method="post">
+    <head>
+        <meta charset="UTF-8">
+        <title>SignIn</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<div>
-<label id=lab>Login</label>
-<input type='text' name='lg'>
+    <body>
+        <div class="container">
 
-</div>
-<div><label id=lab>password</label>
-<input type='text' name='ps'>
-</div>
-<div>
-<button id=but>submit</button>
-</div>
+            <div class="menu">
+                <jsp:include page="menu.jsp" />
+                <h3>SignIn</h3>
+            </div>
+            <div class="form">
+                <form action="logincontroller" method="post">
 
-<div><p>${msg}<p></div>
+                    <div class="inside">
+                        <div>
+ Login:<input type='text' name='lg'>
+                        </div>
+                       <div>
+Password:<input type='text' name='ps'>
+                       </div>
+                        <div>
+ <button id=but>submit</button>
+                        </div>
+                        
+                       
 
-</form></div>
+                    </div>
+                </form>
+            </div>
+ </div>
 
-</body>
-</html>
+    </body>
+
+    </html>

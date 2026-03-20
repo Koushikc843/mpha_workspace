@@ -8,8 +8,17 @@
 </head>
 <body>
 <h3>Product Manager</h3>
-<a href="homecontroller">Home</a>
-<a href="logincontroller">SignIn</a>
+
+<style>
+#.a{
+	font-family:sans-serif;
+	font-family: 10px;
+	color: blue;
+}
+</style>
+<a id=a href="homecontroller">Home</a>
+<a id=a href="logincontroller">SignIn</a>
+<a id=a href="productcontroller">Products</a>
 
 </body>
 </html>
