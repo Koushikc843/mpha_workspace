@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Products</title>
+
+
 </head>
 <body>
 
@@ -40,6 +42,9 @@
 %>
 
 	</table>
+	<a href="${pageContext.request.contextPath}/downloadpdf">
+    <button>Download PDF</button>
+</a>
 
 </body>
 </html>

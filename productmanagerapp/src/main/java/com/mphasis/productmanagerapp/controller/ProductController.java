@@ -25,6 +25,7 @@ public class ProductController extends HttpServlet {
         List<ProductModel> products = productService.getAllProducts();
 
         req.setAttribute("products", products);
+        req.getSession().setAttribute("products", products);
 
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/view/products.jsp");
         rd.forward(req, resp);

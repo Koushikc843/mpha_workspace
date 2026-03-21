@@ -19,6 +19,8 @@
 <a id=a href="homecontroller">Home</a>
 <a id=a href="logincontroller">SignIn</a>
 <a id=a href="productcontroller">Products</a>
+<a id=a href="weathercontroller">Pune</a>
+<a id=a href="whethercontroller">Banglore</a>
 
 </body>
 </html>
