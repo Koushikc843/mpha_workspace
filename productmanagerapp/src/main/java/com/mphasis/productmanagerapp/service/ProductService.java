@@ -6,11 +6,14 @@ import com.mphasis.productmanagerapp.dao.ProductDAO;
 import com.mphasis.productmanagerapp.model.ProductModel;
 
 public class ProductService {
-	private ProductDAO pd=new ProductDAO();
-	
-	public List<ProductModel> getAllProducts(){
-		return pd.findAll();
-	}
-	
 
+    private ProductDAO pd = new ProductDAO();
+
+    public List<ProductModel> getAllProducts() {
+        return pd.findAll();
+    }
+
+    public int saveProduct(ProductModel product) {
+        return pd.saveProduct(product);   // call DAO to insert
+    }
 }

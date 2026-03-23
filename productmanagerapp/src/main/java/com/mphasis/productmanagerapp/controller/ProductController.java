@@ -25,9 +25,26 @@ public class ProductController extends HttpServlet {
         List<ProductModel> products = productService.getAllProducts();
 
         req.setAttribute("products", products);
-        req.getSession().setAttribute("products", products);
 
         RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/view/products.jsp");
         rd.forward(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp)
+            throws ServletException, IOException {
+
+        String id = req.getParameter("id");
+        String name = req.getParameter("name");
+        String price = req.getParameter("price");
+
+        double priceValue = Double.parseDouble(price);
+
+        ProductModel p = new ProductModel(id, name, priceValue);
+
+        productService.saveProduct(p);
+
+        // Redirect back to product list
+        resp.sendRedirect("productcontroller");
     }
 }

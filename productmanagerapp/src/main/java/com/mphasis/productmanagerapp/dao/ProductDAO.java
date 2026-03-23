@@ -45,4 +45,38 @@ public class ProductDAO {
 	}
 	return products;
 	}
+	
+public int saveProduct(ProductModel product){
+	int n=0;
+		
+	try {
+		Class.forName("com.mysql.cj.jdbc.Driver");
+	}
+	catch(ClassNotFoundException e) {
+		System.out.println(e.getMessage());
+		
+	}
+	String url="jdbc:mysql://localhost:3306/mydb";
+	String user="root";
+	String password="root@39";
+	try {
+		Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",user,password);
+		String query="select into product values(?,?,?)";
+		PreparedStatement ps=con.prepareStatement(query);
+		ps.setString(1, product.getId());
+		ps.setString(2, product.getName());
+		ps.setDouble(3, product.getPrice());
+		
+		n=ps.executeUpdate();
+		
+		ps.close();
+		con.close();
+		
+	} catch (SQLException e) {
+		System.out.println(e.getMessage());
+	}
+	return n;
+	}
 }
+
+
