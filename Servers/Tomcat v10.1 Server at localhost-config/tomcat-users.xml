@@ -42,6 +42,22 @@
   examples web application, do not forget to remove the <!.. ..> that surrounds
   them. You will also need to set the passwords to something appropriate.
 -->
+  <role rolename="manager-gui"/>
+  
+  <user username="admin" password="123" roles="manager-gui"/>
+    <user username="nimda" password="123" roles="manager-gui"/>
+
+
+
+  <role rolename="admin"/>
+   <user username="Tom" password="1234" roles="admin"/>
+   
+   
+     <role rolename="manager"/>
+   <user username="james" password="bond" roles="manager"/>
+   
+   
+   
 <!--
   <role rolename="tomcat"/>
   <role rolename="role1"/>
